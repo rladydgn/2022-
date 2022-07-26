@@ -1,0 +1,29 @@
+<nb-layout>
+    <nb-layout-header class="header">
+      <nb-icon class="logo" icon="star"></nb-icon>
+      <ul>
+        <li><h1>2022 국방데이터 활용 공모전</h1></li>
+        <li>
+          <nb-select placeholder="Select Showcase" [(selected)]="selectedItem">
+            <nb-option value="0">Option 0</nb-option>
+            <nb-option value="1" [routerLink]="'localhost:4200'">Option 1</nb-option>
+            <nb-option value="2">Option 2</nb-option>
+          </nb-select>
+        </li>
+      </ul>
+    </nb-layout-header>
+    <nb-layout-column class="colored-column-basic">
+      Hello World!
+    </nb-layout-column>
+    <nb-layout-footer>Contact us</nb-layout-footer>
+</nb-layout>
+
+  <!-- <nb-layout>
+    <nb-layout-header fixed>Company Name</nb-layout-header>
+
+    <nb-sidebar>Sidebar Content</nb-sidebar>
+    
+    <nb-layout-column>
+      Page Content <button nbButton>Hello World</button>
+    </nb-layout-column>
+  </nb-layout> -->
