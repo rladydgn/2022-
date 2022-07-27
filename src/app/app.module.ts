@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { NbButtonModule, NbCardModule, NbIconModule, NbLayoutModule, NbSelectModule, NbSidebarModule, NbThemeModule } from '@nebular/theme'
 import { typeComponent } from './layout/type.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    typeComponent
+    typeComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
