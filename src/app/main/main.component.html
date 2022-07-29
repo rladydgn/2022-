@@ -1,5 +1,11 @@
+<div class="img_box">
+    <img src="https://cdn.pixabay.com/photo/2016/03/27/07/38/police-1282330_960_720.jpg" *ngIf="status1">
+    <img src="https://cdn.pixabay.com/photo/2010/12/06/22/soldiers-1002_960_720.jpg" *ngIf="status2">
+    <span *ngIf="status3">군사용어</span>
+</div>
+
 <nb-card size="giant">
-  <nb-card status="success">
+  <nb-card status="success" (click)="onSave('war')">
     <nb-card-header>전쟁</nb-card-header>
     <nb-card-body>
       A nebula is an interstellar cloud of dust, hydrogen, helium and other ionized gases.
@@ -8,7 +14,7 @@
     </nb-card-body>
   </nb-card>
 
-  <nb-card status="success">
+  <nb-card status="success" (click)="onSave('history')">
     <nb-card-header>역사</nb-card-header>
     <nb-card-body>
       A nebula is an interstellar cloud of dust, hydrogen, helium and other ionized gases.
@@ -17,7 +23,7 @@
     </nb-card-body>
   </nb-card>
 
-  <nb-card status="success">
+  <nb-card status="success" (click)="onSave('word')">
     <nb-card-header>용어</nb-card-header>
     <nb-card-body>
       A nebula is an interstellar cloud of dust, hydrogen, helium and other ionized gases.

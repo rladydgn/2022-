@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 
 @Component({
-    selector:'type-a',
+    selector:'layout',
     templateUrl:'./type.component.html',
     styleUrls: ['./type.component.scss']
 })
