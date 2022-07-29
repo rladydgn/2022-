@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
     selector:'layout',
@@ -6,6 +7,11 @@ import { Component } from "@angular/core";
     styleUrls: ['./type.component.scss']
 })
 
-export class typeComponent{
+export class typeComponent implements OnInit{
+    constructor (private router: Router){}
     selectedItem = '3';
+    ngOnInit(){    }
+    movePage(tag: string){
+        this.router.navigate([tag])
+    }
 }

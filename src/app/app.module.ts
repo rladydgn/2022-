@@ -7,12 +7,17 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { NbButtonModule, NbCardModule, NbIconModule, NbLayoutModule, NbSelectModule, NbSidebarModule, NbThemeModule } from '@nebular/theme'
 import { typeComponent } from './layout/type.component';
 import { MainComponent } from './main/main.component';
+import { WarQuizComponent } from './main/war-quiz/war-quiz.component';
+import { WordQuizComponent } from './main/word-quiz/word-quiz.component';
+import { MainRoutingModule } from './layout/main-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     typeComponent,
-    MainComponent
+    MainComponent,
+    WarQuizComponent,
+    WordQuizComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +29,8 @@ import { MainComponent } from './main/main.component';
     NbCardModule,
     NbIconModule,
     NbButtonModule,
-    NbSelectModule
+    NbSelectModule,
+    MainRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
