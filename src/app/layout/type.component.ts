@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 
 @Component({
-    selector:'layout',
+    selector:'systemLayout',
     templateUrl:'./type.component.html',
     styleUrls: ['./type.component.scss']
 })

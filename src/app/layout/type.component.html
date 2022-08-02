@@ -1,20 +1,21 @@
-<nb-layout>
+<nb-layout windowMode>
     <nb-layout-header class="header">
-      <nb-icon class="logo" icon="star"></nb-icon>
+      <nb-icon class="logo" icon="star" (click)="movePage('')"></nb-icon>
       <ul>
         <li><h1>2022 국방데이터 활용 공모전</h1></li>
         <li>
-          <nb-select placeholder="Select Showcase" [(selected)]="selectedItem">
-            <nb-option value="0" [routerLink]="['WarQuiz']" routerLinkActive="active">전쟁</nb-option>
-            <nb-option value="1" (click)="movePage('/history')">역사</nb-option>
-            <nb-option value="2" (click)="movePage('/WordQuiz')">용어</nb-option>
+          <nb-select placeholder="Select Quiz" [(selected)]="selectedItem">
+            <nb-option value="0" [routerLink]="['WarQuiz']" routerLinkActive="active">전쟁 퀴즈</nb-option>
+            <nb-option value="1" (click)="movePage('/HistoryQuiz')">역사 퀴즈</nb-option>
+            <nb-option value="2" (click)="movePage('/WordQuiz')">용어 퀴즈</nb-option>
           </nb-select>
         </li>
       </ul>
     </nb-layout-header>
     <nb-layout-column class="colored-column-basic">
       Hello World!
-      <main></main>
+      <!-- <main></main> -->
+      <ng-content select="router-outlet"></ng-content>
     </nb-layout-column>
     <nb-layout-footer>Contact us</nb-layout-footer>
 </nb-layout>

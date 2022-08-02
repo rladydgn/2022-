@@ -6,18 +6,12 @@ import { AppComponent } from './app.component';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { NbButtonModule, NbCardModule, NbIconModule, NbLayoutModule, NbSelectModule, NbSidebarModule, NbThemeModule } from '@nebular/theme'
 import { typeComponent } from './layout/type.component';
-import { MainComponent } from './main/main.component';
-import { WarQuizComponent } from './main/war-quiz/war-quiz.component';
-import { WordQuizComponent } from './main/word-quiz/word-quiz.component';
-import { MainRoutingModule } from './layout/main-routing.module';
+import { MainRoutingModule } from './main/main-routing.module';
+import { LayoutModule } from './layout/layout.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    typeComponent,
-    MainComponent,
-    WarQuizComponent,
-    WordQuizComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +24,7 @@ import { MainRoutingModule } from './layout/main-routing.module';
     NbIconModule,
     NbButtonModule,
     NbSelectModule,
-    MainRoutingModule
+    MainRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
