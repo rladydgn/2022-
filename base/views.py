@@ -4,7 +4,7 @@ from rest_framework.filters import SearchFilter
 from rest_framework.generics import ListCreateAPIView
 from rest_framework.response import Response
 
-from base.models import FightRecord
+from base.models import FightRecord, MilitaryTerm
 from base.serializers import FightRecordSerializer, MilitaryTermSerializer
 
 
@@ -30,7 +30,7 @@ class FightRecordListCreateAPIView(ListCreateAPIView):
 
 
 class MilitaryTermListCreateAPIView(ListCreateAPIView):
-    queryset = FightRecord.objects.all()
+    queryset = MilitaryTerm.objects.all()
     serializer_class = MilitaryTermSerializer
 
     # 검색

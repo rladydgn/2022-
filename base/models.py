@@ -12,10 +12,10 @@ class FightRecord(models.Model):
 
 
 class MilitaryTerm(models.Model):
-    menu = models.CharField(max_length=50)
-    museum_code = models.CharField(max_length=50)
+    menu = models.CharField(max_length=50, null=True)
+    museum_code = models.CharField(max_length=50, null=True)
     title = models.CharField(max_length=100)
     content = models.TextField()
-    register = models.CharField(max_length=50)
+    register = models.CharField(max_length=50, null=True)
     standard = models.CharField(max_length=50, null=True)
     outline = models.CharField(max_length=100, null=True)
