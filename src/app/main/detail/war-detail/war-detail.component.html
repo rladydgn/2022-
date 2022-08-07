@@ -5,12 +5,7 @@
             우리는 분단국가 입니다. 항상 전쟁에 대한 준비를 하고 있어야 합니다. 요새 북한이 설치던데 현역분들 훈련 많이 늘었다는 소식을 접했습니다. 몸 조심히 전역하세요. 적당히 뺑이 치시고
             몸 건강히 오는게 최곱니다.
         </span>
-        <div class="search-results"
-        infiniteScroll
-        [infiniteScrollDistance]="2"
-        [infiniteScrollThrottle]="50"
-        [scrollWindow]="false"
-        (scrolled)="onScroll()">
+        <div class="search-results">
             <table class="table">
                 <thead>
                     <tr>
@@ -21,7 +16,7 @@
                 <tbody>
                     <tr *ngFor="let item of items let idx = index">
                         <th scope="row">{{idx+1}}</th>
-                        <td>{{item}}</td>
+                        <td>{{item.title}}</td>
                     </tr>
                 </tbody>
             </table>

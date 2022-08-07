@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataService, warData } from 'src/app/data.service';
 // import { DataService, warData } from '../../data.service';
 
 @Component({
@@ -8,18 +9,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./war-detail.component.scss']
 })
 export class WarDetailComponent implements OnInit {
-  constructor (private router: Router){}
+  constructor (private router: Router, private data: DataService){}
 
   ngOnInit(): void {
+    this.getData();
   }
   
-  // items: warData[] = [];
-  items: string[] = ['jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape'
-  ,'jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape'
-  ,'jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape'
-  ,'jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape'
-  ,'jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape'
-  ,'jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape'];
+  items: any;
+  // items: string[] = ['jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape'
+  // ,'jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape'
+  // ,'jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape'
+  // ,'jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape'
+  // ,'jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape'
+  // ,'jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape','jamong','mango','grape'];
   
   onScroll() {
     console.log("scrolled!!");
@@ -27,6 +29,13 @@ export class WarDetailComponent implements OnInit {
   
   transPage(tag: string){
       this.router.navigate([tag])
+  }
+
+  getData(){
+    this.data.getData().subscribe((data) =>{
+      this.items = data;
+      console.log(this.items);
+    })
   }
 
 }

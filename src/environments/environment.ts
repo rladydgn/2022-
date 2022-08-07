@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://127.0.0.1:8000/base/fightRecord/'
+  warUrl: 'http://121.129.12.192:33333/base/fightRecord/',
+  termUrl: 'ttp://121.129.12.192:33333/milltaryTerm/',
+  quizUrl: 'ttp://121.129.12.192:33333/quiz/?category=militaryTerm/'
 };
 
 /*

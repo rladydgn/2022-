@@ -8,6 +8,8 @@ import { NbButtonModule, NbCardModule, NbIconModule, NbLayoutModule, NbSelectMod
 import { typeComponent } from './layout/type.component';
 import { MainRoutingModule } from './main/main-routing.module';
 import { LayoutModule } from './layout/layout.module';
+import { DataService } from './data.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,8 +27,9 @@ import { LayoutModule } from './layout/layout.module';
     NbButtonModule,
     NbSelectModule,
     MainRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

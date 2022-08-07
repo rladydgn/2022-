@@ -45,9 +45,9 @@ import { WordQuizComponent } from './word-quiz/word-quiz.component';
     NbTabsetModule,
     NbInputModule,
     NbListModule,
-    InfiniteScrollModule 
+    InfiniteScrollModule ,
     // LayoutModule
-  ]
+  ],
   
 })
 export class MainModule { }
