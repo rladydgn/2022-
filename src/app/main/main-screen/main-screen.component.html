@@ -1,43 +1,15 @@
-<div class="img_box">
-    <img src="https://cdn.pixabay.com/photo/2016/03/27/07/38/police-1282330_960_720.jpg" *ngIf="status1">
-    <img src="https://cdn.pixabay.com/photo/2010/12/06/22/soldiers-1002_960_720.jpg" *ngIf="status2">
-    <span *ngIf="status3">군사용어</span>
-</div>
-
-<!-- <nb-card size="giant"> -->
-  <nb-card status="success" (click)="onSave('war')">
-    <nb-card-header>전쟁</nb-card-header>
-    <nb-card-body>
-      A nebula is an interstellar cloud of dust, hydrogen, helium and other ionized gases.
-      Originally, nebula was a name for any diffuse astronomical object,
-      including galaxies beyond the Milky Way.
-    </nb-card-body>
-    <nb-card-footer>
-      <button nbButton hero status="success" (click)="transPage('/WarDetail')">상세페이지로 가기</button>
-    </nb-card-footer>
-  </nb-card>
-
-  <nb-card status="success" (click)="onSave('history')">
-    <nb-card-header>역사</nb-card-header>
-    <nb-card-body>
-      A nebula is an interstellar cloud of dust, hydrogen, helium and other ionized gases.
-      Originally, nebula was a name for any diffuse astronomical object,
-      including galaxies beyond the Milky Way.
-    </nb-card-body>
-    <nb-card-footer>
-      <button nbButton hero status="success" (click)="transPage('/HistoryDetail')">상세페이지로 가기</button>
-    </nb-card-footer>
-  </nb-card>
-
-  <nb-card status="success" (click)="onSave('word')">
-    <nb-card-header>용어</nb-card-header>
-    <nb-card-body>
-      A nebula is an interstellar cloud of dust, hydrogen, helium and other ionized gases.
-      Originally, nebula was a name for any diffuse astronomical object,
-      including galaxies beyond the Milky Way.
-    </nb-card-body>
-    <nb-card-footer>
-      <button nbButton hero status="success" (click)="transPage('/WordDetail')">상세페이지로 가기</button>
-    </nb-card-footer>
-  </nb-card>
-<!-- </nb-card> -->
+  <div class="main-tab">
+    <nb-card size="giant">
+      <nb-tabset fullWidth>
+        <nb-tab tabTitle="전쟁">
+          <app-war-detail></app-war-detail>
+        </nb-tab>
+        <nb-tab tabTitle="역사" >
+          <app-history-detail></app-history-detail>
+        </nb-tab>
+        <nb-tab tabTitle="용어">
+          <app-word-detail></app-word-detail>
+        </nb-tab>
+      </nb-tabset>
+    </nb-card>
+  </div>

@@ -30,18 +30,6 @@ const routes: Routes = [
             path:'HistoryQuiz',
             component: HistoryQuizComponent
           },
-          {
-            path:'WarDetail',
-            component: WarDetailComponent
-          },
-          {
-            path:'HistoryDetail',
-            component: HistoryDetailComponent
-          },
-          {
-            path:'WordDetail',
-            component: WordDetailComponent
-          }
         ]
     },
     // {
