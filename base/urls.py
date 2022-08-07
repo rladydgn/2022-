@@ -16,9 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from base.views import FightRecordListCreateAPIView, MilitaryTermListCreateAPIView
+from base.views import FightRecordListCreateAPIView, MilitaryTermListCreateAPIView, QuizAPIView
 
 urlpatterns = [
     path('fightRecord/', FightRecordListCreateAPIView.as_view(), name='fightrecord'),
-    path('militaryTerm/', MilitaryTermListCreateAPIView.as_view(), name='militaryterm')
+    path('militaryTerm/', MilitaryTermListCreateAPIView.as_view(), name='militaryterm'),
+    path('quiz/', QuizAPIView.as_view(), name='quiz')
 ]

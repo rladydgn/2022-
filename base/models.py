@@ -19,3 +19,13 @@ class MilitaryTerm(models.Model):
     register = models.CharField(max_length=50, null=True)
     standard = models.CharField(max_length=50, null=True)
     outline = models.CharField(max_length=100, null=True)
+
+
+# class Quiz(models.Model):
+#     question = models.TextField()
+#     first_choice = models.CharField(max_length=200)
+#     second_choice = models.CharField(max_length=200)
+#     third_choice = models.CharField(max_length=200)
+#     fourth_choice = models.CharField(max_length=200)
+#     fifth_choice = models.CharField(max_length=200)
+#     answer = models.IntegerField()
