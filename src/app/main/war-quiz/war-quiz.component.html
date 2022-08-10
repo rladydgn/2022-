@@ -1,1 +1,23 @@
-<p>war-quiz works!</p>
+<nb-card *ngFor="let item of items let i = index">
+    <nb-card-header>Q{{i+1}}. {{item.question}}</nb-card-header>
+    <nb-card-body>
+        <nb-radio-group>
+            <nb-radio>
+              {{ item.first_choice }}
+            </nb-radio>
+            <nb-radio>
+                {{ item.second_choice }}
+              </nb-radio>
+              <nb-radio>
+                {{ item.third_choice }}
+              </nb-radio>
+              <nb-radio>
+                {{ item.fourth_choice }}
+              </nb-radio>
+              <nb-radio>
+                {{ item.fifth_choice }}
+              </nb-radio>
+          </nb-radio-group>
+    </nb-card-body>
+    <nb-card-footer><button nbButton outline status="primary">정답확인</button></nb-card-footer>
+</nb-card>

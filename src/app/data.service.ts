@@ -10,11 +10,19 @@ export interface warData{
   content: string
 }
 
+export interface quizData{
+  title: string,
+
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
   warApiUrl = environment.warUrl;
+  quizApiUrl = environment.quizUrl;
+  warQuizUrl = environment.quizUrl2;
+  apiUrl = [this.warApiUrl, this.quizApiUrl, this.warQuizUrl];
 
   constructor(private _http: HttpClient) { }
 
@@ -39,8 +47,8 @@ export class DataService {
       `${error.error.message}`);
   }
 
-  getData() {
-    return this._http.get(`${this.warApiUrl}`).pipe(
+  getData(index: number) {
+    return this._http.get(`${this.apiUrl[index]}`).pipe(
       catchError(this.handleError)
     );
   }
