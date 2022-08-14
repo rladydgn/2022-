@@ -12,7 +12,6 @@
 .table{
     text-align: center;
     width: 100%;
-    border: 1px solid skyblue;
     border-radius: 1rem;
 }
 
@@ -21,7 +20,8 @@
     max-height: 300px;
 }
 
-::ng-deep .nb-theme-default nb-card{
-    height: 400px;
-    margin-top: 40px;
-}
+.search-results {
+    margin-top: 20px;
+    height: 15rem;
+    overflow: scroll;
+  }

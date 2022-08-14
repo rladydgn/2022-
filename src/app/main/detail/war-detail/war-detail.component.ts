@@ -12,6 +12,7 @@ export class WarDetailComponent implements OnInit {
   constructor (private router: Router, private data: DataService){}
   isClick: boolean = false;
   index: number = 0;
+  mydata : string ='';
   ngOnInit(): void {
     this.getData();
   }
@@ -44,7 +45,6 @@ export class WarDetailComponent implements OnInit {
   }
   
   detailContent(idx: number){
-    console.log(idx);
     if (this.isClick === false || this.items[idx].content != this.items[this.index].content){
       this.isClick = true;
     }
@@ -52,6 +52,14 @@ export class WarDetailComponent implements OnInit {
       this.isClick = false;
     }
     this.index = idx
+  }
+
+  onEnter(war_search: string){
+    for (let idx = 0; idx< this.items.length; idx++){
+      if (this.items[idx].title === war_search){
+        this.detailContent(idx);
+      }
+    }
   }
 
 }

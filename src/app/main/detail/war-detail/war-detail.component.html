@@ -1,11 +1,12 @@
         <div class="search-box">
-            <input nbInput id="search" class="search-input" placeholder="Search">
+            <input nbInput id="search" class="search-input" placeholder="Search" type="text" [(ngModel)]="mydata" (keyup.enter)="onEnter(mydata)">
         </div>
-        <span>
-            우리는 분단국가 입니다. 항상 전쟁에 대한 준비를 하고 있어야 합니다. 요새 북한이 설치던데 현역분들 훈련 많이 늘었다는 소식을 접했습니다. 몸 조심히 전역하세요. 적당히 뺑이 치시고
-            몸 건강히 오는게 최곱니다.
-        </span>
-        <nb-card class="war-table">
+
+        <div class="search-results"
+		    infiniteScroll
+		    [infiniteScrollDistance]="2"
+		    [infiniteScrollThrottle]="50"
+		    (scrolled)="onScroll()">
             <table class="table">
                 <thead>
                     <tr>
@@ -20,10 +21,11 @@
                     </tr>
                 </tbody>
             </table>
-            <nb-card accent="info" *ngIf="isClick" autofocus>
-                <nb-card-header>{{items[index].title}}</nb-card-header>
-                <nb-card-body>
-                    {{items[index].content}}
-                </nb-card-body>
-            </nb-card>  
-        </nb-card>
+		</div>
+
+        <nb-card accent="info" *ngIf="isClick">
+            <nb-card-header>{{items[index].title}}</nb-card-header>
+            <nb-card-body>
+                {{items[index].content}}
+            </nb-card-body>
+        </nb-card>  

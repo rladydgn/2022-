@@ -6,7 +6,6 @@
         <li>
           <nb-select placeholder="Select Quiz" [(selected)]="selectedItem">
             <nb-option value="0" [routerLink]="['WarQuiz']" routerLinkActive="active">전쟁 퀴즈</nb-option>
-            <nb-option value="1" (click)="movePage('/HistoryQuiz')">역사 퀴즈</nb-option>
             <nb-option value="2" (click)="movePage('/WordQuiz')">용어 퀴즈</nb-option>
           </nb-select>
         </li>

@@ -10,9 +10,7 @@ import { LayoutModule } from '../layout/layout.module';
 
 import { MainComponent } from './main.component';
 import { typeComponent } from '../layout/type.component';
-import { HistoryQuizComponent } from './history-quiz/history-quiz.component';
 import { WarDetailComponent } from './detail/war-detail/war-detail.component';
-import { HistoryDetailComponent } from './detail/history-detail/history-detail.component';
 import { WordDetailComponent } from './detail/word-detail/word-detail.component';
 import { MainScreenComponent } from './main-screen/main-screen.component';
 import { WarQuizComponent } from './war-quiz/war-quiz.component';
@@ -27,9 +25,7 @@ import { FormsModule } from '@angular/forms';
     WarQuizComponent,
     WordQuizComponent,
     typeComponent,
-    HistoryQuizComponent,
     WarDetailComponent,
-    HistoryDetailComponent,
     WordDetailComponent
   ],
   imports: [

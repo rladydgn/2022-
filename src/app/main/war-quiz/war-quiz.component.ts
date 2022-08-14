@@ -22,4 +22,14 @@ export class WarQuizComponent implements OnInit {
     })
   }
 
+  isclick: boolean = false;
+  answer(){
+    if (this.isclick === false){
+      this.isclick = true;
+    }
+    else{
+      this.isclick = false;
+    }
+  }
+
 }

@@ -19,5 +19,8 @@
               </nb-radio>
           </nb-radio-group>
     </nb-card-body>
-    <nb-card-footer><button nbButton outline status="primary">정답확인</button></nb-card-footer>
+    <nb-card-footer>
+      <button nbButton outline status="primary" (click)="answer()">정답확인</button>
+      <p *ngIf="isclick">{{item.answer}}</p>
+    </nb-card-footer>
 </nb-card>

@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HistoryDetailComponent } from './detail/history-detail/history-detail.component';
 import { WarDetailComponent } from './detail/war-detail/war-detail.component';
 import { WordDetailComponent } from './detail/word-detail/word-detail.component';
-import { HistoryQuizComponent } from './history-quiz/history-quiz.component';
 import { MainScreenComponent } from './main-screen/main-screen.component';
 import { MainComponent } from './main.component';
 import { WarQuizComponent } from './war-quiz/war-quiz.component';
@@ -26,10 +24,7 @@ const routes: Routes = [
             path:'WordQuiz',
             component: WordQuizComponent
           },
-          {
-            path:'HistoryQuiz',
-            component: HistoryQuizComponent
-          },
+
         ]
     },
     // {
