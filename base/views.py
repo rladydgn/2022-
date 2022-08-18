@@ -56,7 +56,7 @@ class MilitaryTermListCreateAPIView(ListCreateAPIView):
 
 class QuizAPIView(APIView):
     def get(self, request):
-        categories = ["militaryTerm", "fightRecord"]
+        categories = ["militaryTerm", "fightRecord", "all"]
 
         category = ""
         # 에러방지 멀티 인덱스?
@@ -71,24 +71,44 @@ class QuizAPIView(APIView):
         answers = []
 
         while len(data) < 10:
-            numbers = []
-            if category == "militaryTerm":
+
+            question = ""
+            answer = ""
+            choices = []
+
+            r = 0
+            if category == "all":
+                r = random.randint(1, 2)
+
+            if category == "militaryTerm" or r == 1:
                 numbers = get_random_number(1, 918, 5)
+                question = MilitaryTerm.objects.get(pk=numbers[0]).content
+                answer = MilitaryTerm.objects.get(pk=numbers[0]).title
 
-            question = MilitaryTerm.objects.get(pk=numbers[0]).content
-            answer = MilitaryTerm.objects.get(pk=numbers[0]).title
+                if answer in answers:
+                    continue
 
-            if answer in answers:
-                continue
+                for number in numbers:
+                    tmp = MilitaryTerm.objects.get(pk=number)
+                    choices.append(tmp.title)
+
+            elif category == "fightRecord" or r == 2:
+                numbers = get_random_number(278, 474, 5)
+                question = FightRecord.objects.get(pk=numbers[0]).content
+                answer = FightRecord.objects.get(pk=numbers[0]).title
+
+                if answer in answers:
+                    continue
+
+                for number in numbers:
+                    tmp = FightRecord.objects.get(pk=number)
+                    choices.append(tmp.title)
 
             answers.append(answer)
-
-            choices = []
-            for number in numbers:
-                tmp = MilitaryTerm.objects.get(pk=number)
-                choices.append(tmp.title)
-
             random.shuffle(choices)
+
+            question = question.replace(answer, "'이것'")
+            question = question.replace(answer.split('(')[0], "'이것'")
 
             d = {
                 "first_choice": choices[0],
