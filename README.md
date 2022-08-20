@@ -14,3 +14,17 @@
 김용후
 
 육종호
+
+
+## 실행방법
+
+### angular
+node.js 설치되어 있어야 함
+
+front-end 브랜치 다운
+해당 경로에서
+npm install -g @angular/cli
+ng serve
+
+### django
+django 서버는 상시 돌아가는중
