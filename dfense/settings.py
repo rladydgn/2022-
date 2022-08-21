@@ -155,7 +155,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -163,12 +163,13 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-ALLOWED_HOSTS = [config['SETTING']['HOST1'], config['SETTING']['HOST2'], config['SETTING']['HOST']]
+# ALLOWED_HOSTS = [config['SETTING']['HOST1'], config['SETTING']['HOST2'], config['SETTING']['HOST3']]
+ALLOWED_HOSTS = ['*']
 
 # angular와 연동
 CLIENT_DIR = os.path.join(BASE_DIR, "2022-defense-data-front_end")
 STATICFILES_DIRS = [
-    os.path.join(CLIENT_DIR, 'dist/client'),
+    os.path.join(CLIENT_DIR, 'dist/testproject'),
 ]
 # python manage.py collectstatic 를 하게 되면 static 파일이 모이는데
 # 모일 경로를 설정해 주는 것이다.
