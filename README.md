@@ -28,3 +28,14 @@ ng serve
 
 ### django
 django 서버는 상시 돌아가는중
+
+![캡처1](https://user-images.githubusercontent.com/39542757/185778511-8122b3b7-7633-4a8e-9de5-d59ac34f6eaa.PNG)
+
+
+![캡처2](https://user-images.githubusercontent.com/39542757/185778514-7c089075-4e9a-4c1e-850f-3d8e7abe9e4b.PNG)
+
+
+![캡처3](https://user-images.githubusercontent.com/39542757/185778516-bd76f75a-7bb4-44b5-9848-81d95fba3db8.PNG)
+
+
+![캡처4](https://user-images.githubusercontent.com/39542757/185778517-c6accba7-a7f1-490f-82aa-58db795497af.PNG)
