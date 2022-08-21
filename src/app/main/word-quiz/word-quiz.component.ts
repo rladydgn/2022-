@@ -21,4 +21,14 @@ export class WordQuizComponent implements OnInit {
       this.items = data;
     })
   }
+
+  isclick: boolean = false;
+  answer(){
+    if (this.isclick === false){
+      this.isclick = true;
+    }
+    else{
+      this.isclick = false;
+    }
+  }
 }
