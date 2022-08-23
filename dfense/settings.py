@@ -167,10 +167,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 ALLOWED_HOSTS = ['*']
 
 # angular와 연동
-CLIENT_DIR = os.path.join(BASE_DIR, "2022-defense-data-front_end")
-STATICFILES_DIRS = [
-    os.path.join(CLIENT_DIR, 'dist/testproject'),
-]
+# CLIENT_DIR = os.path.join(BASE_DIR, "2022-defense-data-front_end")
+# STATICFILES_DIRS = [
+#     os.path.join(CLIENT_DIR, 'dist/testproject'),
+# ]
 # python manage.py collectstatic 를 하게 되면 static 파일이 모이는데
 # 모일 경로를 설정해 주는 것이다.
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
